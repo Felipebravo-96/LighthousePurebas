@@ -11,7 +11,8 @@ module.exports = {
             puppeteerScript: "./set-cookie.js"
         },
         assert: {
-            assertions: {
+            preset: "lighthouse:recommended",
+            /*assertions: {
                 'categories:performance':['error', {minScore: .6}],
                 'categories:accessibility':['error', {minScore: .6}],
                 'categories:best-practices':['error', {minScore: .6}],
@@ -27,7 +28,7 @@ module.exports = {
                         }
                     }
                 }
-            }
+            }*/
         },
         upload: {
             target: 'temporary-public-storage'
