@@ -34,16 +34,3 @@ jobs:
         run: |
           npm install -g @lhci/cli
           lhci autorun --config=./lighthouserc-ci.js
-
-      - name: Extract assertions and save to file
-        run: |
-          jq '.audits | to_entries | map(select(.value.score != null and .value.score < 1)) | .[].key' ./lighthouse-report.json > lighthouse-assertions.txt
-      
-      - name: Set Date Variable
-        run: echo "REPORT_DATE=$(date +'%d-%m-%Y')" >> $GITHUB_ENV
-
-      - name: Lighthouse Assertions ${{ env.REPORT_DATE }}
-        uses: actions/upload-artifact@v3
-        with:
-          name: lighthouse-assertions
-          path: lighthouse-assertions.txt
