@@ -7,6 +7,7 @@ module.exports = {
                 'https://qadev--redcloudone.myvtex.com/',
                 'https://qadev--redcloudone.myvtex.com/canned-tuna/p',
             ],
+            chromePath: '/usr/bin/google-chrome-stable',
             puppeteerScript: "./set-cookie.js"
         },
         asserts: {
