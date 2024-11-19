@@ -16,7 +16,17 @@ module.exports = {
                 'categories:accessibility':['error', {minScore: .6}],
                 'categories:best-practices':['error', {minScore: .6}],
                 'categories:seo':['error', {minScore: .6}],
-                'categories:pwa': 'off',
+                'categories:pwa':'off',
+                'audits':{
+                    'first-contentful-paint': {
+                        'score': {
+                            'max': 1.8
+                        },
+                        'error': {
+                            'min': 3.0
+                        }
+                    }
+                }
             }
         },
         upload: {
