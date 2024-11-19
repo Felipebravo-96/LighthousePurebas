@@ -10,7 +10,7 @@ module.exports = {
             chromePath: '/usr/bin/google-chrome-stable',
             puppeteerScript: "./set-cookie.js"
         },
-        asserts: {
+        assert: {
             assertions: {
                 'categories:performance':['error', {minScore: .6}],
                 'categories:accessibility':['error', {minScore: .6}],
