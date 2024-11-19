@@ -1,12 +1,11 @@
+require('dotenv').config();
+console.log("Array de urls: " + process.env.URLS.split(','))
 module.exports = {
     ci: {
         collect: {
             startServerCommand: 'npm run start',
             numberOfRuns: 1,
-            url: [
-                'https://qadev--redcloudone.myvtex.com/',
-                'https://qadev--redcloudone.myvtex.com/canned-tuna/p',
-            ],
+            url: process.env.URLS.split(','),
             chromePath: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
             puppeteerScript: "./set-cookie.js"
         },

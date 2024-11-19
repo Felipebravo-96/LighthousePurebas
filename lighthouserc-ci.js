@@ -3,10 +3,7 @@ module.exports = {
         collect: {
             startServerCommand: 'npm run start',
             numberOfRuns: 3,
-            url: [
-                'https://qadev--redcloudone.myvtex.com/',
-                'https://qadev--redcloudone.myvtex.com/canned-tuna/p',
-            ],
+            url: process.env.URLS.split(','),
             chromePath: '/usr/bin/google-chrome-stable',
             puppeteerScript: "./set-cookie.js"
         },
