@@ -9,6 +9,7 @@ jobs:
   lhci:
     runs-on: ubuntu-latest
     env:
+      URLS: ${{ secrets.URLS }}
       VTEX_ID_CLIENT_AUT_COOKIE: ${{ secrets.VTEX_ID_CLIENT_AUT_COOKIE }}
     steps:
       - name: Checkout code
