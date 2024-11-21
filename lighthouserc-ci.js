@@ -1,15 +1,15 @@
 module.exports = {
-    ci: {
-        collect: {
-            startServerCommand: 'npm run start',
-            numberOfRuns: 3,
-            url: process.env.URLS.split(','),
-            chromePath: '/usr/bin/google-chrome-stable',
-            puppeteerScript: "./set-cookie.js"
-        },
-        assert: {
-            preset: "lighthouse:recommended",
-            /*assertions: {
+  ci: {
+    collect: {
+      startServerCommand: "npm run start",
+      numberOfRuns: 3,
+      url: process.env.URLS.split(","),
+      chromePath: "/usr/bin/google-chrome-stable",
+      puppeteerScript: "./set-cookie.js",
+    },
+    assert: {
+      preset: "lighthouse:recommended",
+      /*assertions: {
                 'categories:performance':['error', {minScore: .6}],
                 'categories:accessibility':['error', {minScore: .6}],
                 'categories:best-practices':['error', {minScore: .6}],
@@ -26,9 +26,9 @@ module.exports = {
                     }
                 }
             }*/
-        },
-        upload: {
-            target: 'temporary-public-storage'
-        }
-    }
-}
+    },
+    upload: {
+      target: "temporary-public-storage",
+    },
+  },
+};
