@@ -12,6 +12,13 @@ jobs:
       URLS: ${{ secrets.URLS }}
       VTEX_ID_CLIENT_AUT_COOKIE: ${{ secrets.VTEX_ID_CLIENT_AUT_COOKIE }}
     steps:
+
+      - name: Configure Swap
+        run: |
+          sudo fallocate -l 2G /swapfile
+          sudo chmod 600 /swapfile
+          sudo mkswap /swapfile
+          sudo swapon /swapfile
       - name: Checkout code
         uses: actions/checkout@v3
 
@@ -30,6 +37,7 @@ jobs:
           context: .
           push: true
           tags: ${{ vars.DOCKERHUB_USERNAME }}/clockbox:latest
+          build-args: --progress=plain
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
