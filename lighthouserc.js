@@ -8,7 +8,7 @@ module.exports = {
       startServerCommand: "npm run start",
       numberOfRuns: 2,
       url: process.env.URLS.split(","),
-      chromePath: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      chromePath: 'C:\\Program Files\\Google\\Chrome Dev\\Application\\chrome.exe',
       puppeteerScript: "./set-cookie.js",
     },
     server: {

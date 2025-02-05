@@ -6,7 +6,7 @@ module.exports = {
       startServerCommand: "npm run start",
       numberOfRuns: 3,
       url: process.env.URLS.split(","),
-      chromePath: "/usr/bin/google-chrome-stable",
+      chromePath: "/usr/bin/google-chrome",
       puppeteerScript: "./set-cookie.js",
     },
     assert: {
