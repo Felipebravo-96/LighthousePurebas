@@ -66,3 +66,6 @@ jobs:
         with:
           name: lighthouse-reports
           path: ./lighthouse-reports
+
+      - name: List reports in lighthouse-reports directory
+        run: ls -l ./lighthouse-reports
