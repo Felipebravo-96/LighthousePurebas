@@ -8,7 +8,6 @@ module.exports = {
       url: process.env.URLS.split(","),
       chromePath: "/usr/bin/google-chrome",
       puppeteerScript: "./set-cookie.js",
-      
     },
     assert: {
       preset: "lighthouse:recommended",
